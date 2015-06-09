@@ -287,7 +287,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="operation.js.html">operation.js</a>, <a href="operation.js.html#line286">line 286</a>
+        <a href="operation.js.html">operation.js</a>, <a href="operation.js.html#line319">line 319</a>
     </li></ul></dd>
     
 
@@ -1190,15 +1190,481 @@ trusted and the currency code are in the given Currency object.
 
     
 
-    <h4 class="name" id=".createOffer"><span class="type-signature">(static) </span>createOffer<span class="signature">(opts, takerGets, takerPays, amount, price, offerId)</span><span class="type-signature"> &rarr; {xdr.CreateOfferOp}</span></h4>
+    <h4 class="name" id=".createPassiveOffer"><span class="type-signature">(static) </span>createPassiveOffer<span class="signature">(opts, takerGets, takerPays, amount, price)</span><span class="type-signature"> &rarr; {xdr.CreatePassiveOfferOp}</span></h4>
 
     
 
 
 
 <div class="description">
-    Returns a XDR CreateOfferOp. A "create offer" operation creates, updates, or
-deletes an offer for the account.
+    Returns a XDR CreatePasiveOfferOp. A "create passive offer" operation creates an
+offer that won't consume a counter offer that exactly matches this offer. This is
+useful for offers just used as 1:1 exchanges for path payments. Use manage offer
+to manage this offer after using this operation to create it.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>takerGets</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Currency.html">Currency</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">What you're selling.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>takerPays</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Currency.html">Currency</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">What you're buying.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>amount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The total amount you're selling. If 0, deletes the offer.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>price</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The exchange rate ratio (takerpay / takerget)</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="operation.js.html">operation.js</a>, <a href="operation.js.html#line291">line 291</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">xdr.CreatePassiveOfferOp</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".inflation"><span class="type-signature">(static) </span>inflation<span class="signature">(opts<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {xdr.AccountMergeOp}</span></h4>
+
+    
+
+
+
+<div class="description">
+    This operation generates the inflation.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>source</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The optional source account.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="operation.js.html">operation.js</a>, <a href="operation.js.html#line337">line 337</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">xdr.AccountMergeOp</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".manageOffer"><span class="type-signature">(static) </span>manageOffer<span class="signature">(opts, takerGets, takerPays, amount, price, offerId)</span><span class="type-signature"> &rarr; {xdr.ManageOfferOp}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Returns a XDR ManageOfferOp. A "manage offer" operation creates, updates, or
+deletes an offer.
 </div>
 
 
@@ -1440,229 +1906,7 @@ deletes an offer for the account.
     </dt>
     <dd>
         
-<span class="param-type">xdr.CreateOfferOp</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id=".inflation"><span class="type-signature">(static) </span>inflation<span class="signature">(opts<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {xdr.AccountMergeOp}</span></h4>
-
-    
-
-
-
-<div class="description">
-    This operation generates the inflation.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>opts</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">
-                <h6>Properties</h6>
-                
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>source</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The optional source account.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="operation.js.html">operation.js</a>, <a href="operation.js.html#line304">line 304</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">xdr.AccountMergeOp</span>
+<span class="param-type">xdr.ManageOfferOp</span>
 
 
     </dd>
@@ -1778,7 +2022,7 @@ operation.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="operation.js.html">operation.js</a>, <a href="operation.js.html#line320">line 320</a>
+        <a href="operation.js.html">operation.js</a>, <a href="operation.js.html#line353">line 353</a>
     </li></ul></dd>
     
 
@@ -3162,7 +3406,7 @@ The account flags are the xdr.AccountFlags enum, which are:
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0-dev</a> on Thu Jun 04 2015 16:27:51 GMT+0000 (UTC)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0-dev</a> on Tue Jun 09 2015 17:30:19 GMT+0000 (UTC)
 </footer>
 
 <script> prettyPrint(); </script>
