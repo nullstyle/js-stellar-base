@@ -42,6 +42,449 @@
 
     
 
+    <h4 class="name" id="TransactionBuilder"><span class="type-signature"></span>new TransactionBuilder<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="transaction_builder.js.html">transaction_builder.js</a>, <a href="transaction_builder.js.html#line13">line 13</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="addOperation"><span class="type-signature"></span>addOperation<span class="signature">(The)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Adds an operation to the transaction.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>The</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">xdr.Operation</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">xdr operation object, use <a href="Operation.html">Operation</a> static methods.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="transaction_builder.js.html">transaction_builder.js</a>, <a href="transaction_builder.js.html#line76">line 76</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="addSigner"><span class="type-signature"></span>addSigner<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Adds the given signer's signature to the transaction.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="transaction_builder.js.html">transaction_builder.js</a>, <a href="transaction_builder.js.html#line84">line 84</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="build"><span class="type-signature"></span>build<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Transaction.html">Transaction</a>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    This will build the transaction and sign it with the source account. It will
+also increment the source account's sequence number by 1.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="transaction_builder.js.html">transaction_builder.js</a>, <a href="transaction_builder.js.html#line94">line 94</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    will return the built Transaction.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Transaction.html">Transaction</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        TransactionBuilder
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
     <h4 class="name" id="TransactionBuilder"><span class="type-signature"></span>new TransactionBuilder<span class="signature">(sourceAccount, opts<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
 
     
@@ -457,7 +900,7 @@ both the source acccount and the destinationA account for it to be valid.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="transaction_builder.js.html">transaction_builder.js</a>, <a href="transaction_builder.js.html#line54">line 54</a>
+        <a href="transaction_builder.js.html">transaction_builder.js</a>, <a href="transaction_builder.js.html#line55">line 55</a>
     </li></ul></dd>
     
 
@@ -606,7 +1049,7 @@ both the source acccount and the destinationA account for it to be valid.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="transaction_builder.js.html">transaction_builder.js</a>, <a href="transaction_builder.js.html#line75">line 75</a>
+        <a href="transaction_builder.js.html">transaction_builder.js</a>, <a href="transaction_builder.js.html#line76">line 76</a>
     </li></ul></dd>
     
 
@@ -688,7 +1131,7 @@ both the source acccount and the destinationA account for it to be valid.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="transaction_builder.js.html">transaction_builder.js</a>, <a href="transaction_builder.js.html#line83">line 83</a>
+        <a href="transaction_builder.js.html">transaction_builder.js</a>, <a href="transaction_builder.js.html#line84">line 84</a>
     </li></ul></dd>
     
 
@@ -771,450 +1214,7 @@ also increment the source account's sequence number by 1.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="transaction_builder.js.html">transaction_builder.js</a>, <a href="transaction_builder.js.html#line93">line 93</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    will return the built Transaction.
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Transaction.html">Transaction</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-        
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>
-        TransactionBuilder
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-
-    
-
-    <h4 class="name" id="TransactionBuilder"><span class="type-signature"></span>new TransactionBuilder<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="transaction_builder.js.html">transaction_builder.js</a>, <a href="transaction_builder.js.html#line12">line 12</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    <h4 class="name" id="addOperation"><span class="type-signature"></span>addOperation<span class="signature">(The)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-<div class="description">
-    Adds an operation to the transaction.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>The</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">xdr.Operation</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">xdr operation object, use <a href="Operation.html">Operation</a> static methods.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="transaction_builder.js.html">transaction_builder.js</a>, <a href="transaction_builder.js.html#line75">line 75</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="addSigner"><span class="type-signature"></span>addSigner<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-<div class="description">
-    Adds the given signer's signature to the transaction.
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="transaction_builder.js.html">transaction_builder.js</a>, <a href="transaction_builder.js.html#line83">line 83</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="build"><span class="type-signature"></span>build<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Transaction.html">Transaction</a>}</span></h4>
-
-    
-
-
-
-<div class="description">
-    This will build the transaction and sign it with the source account. It will
-also increment the source account's sequence number by 1.
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="transaction_builder.js.html">transaction_builder.js</a>, <a href="transaction_builder.js.html#line93">line 93</a>
+        <a href="transaction_builder.js.html">transaction_builder.js</a>, <a href="transaction_builder.js.html#line94">line 94</a>
     </li></ul></dd>
     
 
@@ -1284,7 +1284,7 @@ also increment the source account's sequence number by 1.
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0-dev</a> on Thu Jul 23 2015 12:02:33 GMT+0000 (UTC)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0-dev</a> on Fri Jul 24 2015 15:59:50 GMT+0000 (UTC)
 </footer>
 
 <script> prettyPrint(); </script>
